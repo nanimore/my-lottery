@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="55d39566-4ed6-4685-be18-5a250af7cd52" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/sql/lottery.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-application/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-common/src/main/java/org/example/common/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-common/src/main/java/org/example/common/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-infrastructure/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IActivityDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/po/Activity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-interfaces/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/java/org/example/LotteryApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/java/org/example/interfaces/ActivityBooth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/config/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/Activity_Mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/ActivityBoothTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-rpc/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/IActivityBooth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/dto/ActivityDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/req/ActivityReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/res/ActivityRes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2efhjY3l0fxit2yINZKB9Uc3gcf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/Projects/IDEA/my-lottery/my-lottery/lottery-common/src/main/java/org/example/common",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-common\src\main\java\org\example\common" />
+      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-rpc\src\main\java\org\example\rpc" />
+      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-infrastructure\src\main\java\org\example" />
+      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-interfaces\src\main" />
+      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\doc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
+      <recent name="org.example.interfaces" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.LotteryApplication">
+    <configuration name="ActivityBoothTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lottery-interfaces" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ActivityBoothTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LotteryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="lottery-interfaces" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.LotteryApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.LotteryApplication" />
+        <item itemvalue="JUnit.ActivityBoothTest.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55d39566-4ed6-4685-be18-5a250af7cd52" name="Changes" comment="" />
+      <created>1712301677772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712301677772</updated>
+      <workItem from="1712301678845" duration="16594000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
