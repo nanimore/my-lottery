@@ -15,7 +15,7 @@ public class ActivityBoothTest {
     @Test
     public void test() {
 
-        Activity activity = activityDao.queryActivityById(1L);
+        Activity activity = activityDao.queryActivityById(100001L);
         System.out.println(activity.toString());
     }
 

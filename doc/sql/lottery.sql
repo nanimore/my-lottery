@@ -37,3 +37,22 @@ CREATE TABLE `activity` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_activity_id` (`activity_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='活动配置';
+
+
+
+create table strategy
+(
+    id           bigint(11) auto_increment comment '自增ID'
+        primary key,
+    strategyId   bigint(11)   not null comment '策略ID',
+    strategyDesc varchar(128) null comment '策略描述',
+    strategyMode int(4)       null comment '策略方式「1:单项概率、2:总体概率」',
+    grantType    int(4)       null comment '发放奖品方式「1:即时、2:定时[含活动结束]、3:人工」',
+    grantDate    datetime     null comment '发放奖品时间',
+    extInfo      varchar(128) null comment '扩展信息',
+    createTime   datetime     null comment '创建时间',
+    updateTime   datetime     null comment '修改时间',
+    constraint strategy_strategyId_uindex
+        unique (strategyId)
+)
+    comment '策略配置';
