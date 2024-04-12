@@ -14,7 +14,9 @@ spring:
 
 mybatis-plus:
   configuration:
-    map-underscore-to-camel-case: false
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+
   mapper-locations: classpath:/mybatis/mapper/*.xml
 #  global-config:
 #    db-config:

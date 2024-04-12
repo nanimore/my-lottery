@@ -1,25 +1,28 @@
 package org.example.domain.strategy.model.aggregates;
 
-import javafx.beans.binding.LongExpression;
+
 import lombok.Data;
-import org.example.infrastructure.po.Strategy;
-import org.example.infrastructure.po.StrategyDetail;
+import org.example.domain.strategy.model.vo.StrategyBriefVO;
+import org.example.domain.strategy.model.vo.StrategyDetailBriefVO;
 
 import java.util.List;
 
+/**
+ * @description: 抽奖策略聚合对象
+ */
 @Data
 public class StrategyRich {
 
     private Long strategyId;
     // 策略配置
-    private Strategy strategy;
+    private StrategyBriefVO strategy;
     // 策略明细
-    private List<StrategyDetail> strategyDetailList;
+    private List<StrategyDetailBriefVO> strategyDetailList;
 
     public StrategyRich(){
 
     }
-    public StrategyRich(Long strategyId, Strategy strategy, List<StrategyDetail> strategyDetailList) {
+    public StrategyRich(Long strategyId, StrategyBriefVO strategy, List<StrategyDetailBriefVO> strategyDetailList) {
         this.strategyId = strategyId;
         this.strategy = strategy;
         this.strategyDetailList = strategyDetailList;

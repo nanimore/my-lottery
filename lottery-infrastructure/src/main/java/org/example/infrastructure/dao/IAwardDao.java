@@ -3,6 +3,8 @@ package org.example.infrastructure.dao;
 import org.example.infrastructure.po.Award;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+import java.util.List;
+
 /**
 * @author nanimo
 * @description 针对表【award(奖品配置)】的数据库操作Mapper
@@ -11,6 +13,12 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 */
 public interface IAwardDao extends BaseMapper<Award> {
 
+    /**
+     * 插入奖品配置
+     *
+     * @param list 奖品配置
+     */
+    void insertList(List<Award> list);
 }
 
 

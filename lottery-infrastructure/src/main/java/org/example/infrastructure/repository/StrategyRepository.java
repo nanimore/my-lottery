@@ -1,7 +1,10 @@
-package org.example.domain.strategy.respository.impl;
+package org.example.infrastructure.repository;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.example.domain.strategy.model.aggregates.StrategyRich;
+import org.example.domain.strategy.model.vo.AwardBriefVO;
+import org.example.domain.strategy.model.vo.StrategyBriefVO;
+import org.example.domain.strategy.model.vo.StrategyDetailBriefVO;
 import org.example.domain.strategy.respository.IStrategyRepository;
 import org.example.infrastructure.dao.IAwardDao;
 import org.example.infrastructure.dao.IStrategyDao;
@@ -9,9 +12,11 @@ import org.example.infrastructure.dao.IStrategyDetailDao;
 import org.example.infrastructure.po.Award;
 import org.example.infrastructure.po.Strategy;
 import org.example.infrastructure.po.StrategyDetail;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,17 +39,29 @@ public class StrategyRepository implements IStrategyRepository {
         queryWrapper.eq("strategyId", strategyId);
         List<StrategyDetail> strategyDetails = strategyDetailDao.selectList(queryWrapper);
 
-        StrategyRich strategyRich = new StrategyRich();
-        strategyRich.setStrategy(strategy);
-        strategyRich.setStrategyId(strategyId);
-        strategyRich.setStrategyDetailList(strategyDetails);
+        StrategyBriefVO strategyBriefVO = new StrategyBriefVO();
+        BeanUtils.copyProperties(strategy,strategyBriefVO);
 
+        List<StrategyDetailBriefVO> strategyDetailBriefVOs = new ArrayList<>();
+        for (StrategyDetail strategyDetail : strategyDetails) {
+            StrategyDetailBriefVO strategyDetailBriefVO = new StrategyDetailBriefVO();
+            BeanUtils.copyProperties(strategyDetail, strategyDetailBriefVO);
+            strategyDetailBriefVOs.add(strategyDetailBriefVO);
+        }
+
+        StrategyRich strategyRich = new StrategyRich(strategyId, strategyBriefVO, strategyDetailBriefVOs);
         return strategyRich;
     }
 
     @Override
-    public Award queryAwardInfo(String awardId) {
-        return awardDao.selectById(awardId);
+    public AwardBriefVO queryAwardInfo(String awardId) {
+        QueryWrapper<Award> qw = new QueryWrapper<>();
+        qw.eq("award_id", awardId);
+        Award award = awardDao.selectOne(qw);
+        AwardBriefVO awardBriefVO = new AwardBriefVO();
+        BeanUtils.copyProperties(award, awardBriefVO);
+
+        return awardBriefVO;
     }
 
     @Override
