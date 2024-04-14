@@ -1,16 +1,12 @@
 package org.example.domain.strategy.service.draw.impl;
 
 import com.alibaba.fastjson.JSON;
-import org.example.domain.strategy.model.aggregates.StrategyRich;
-import org.example.domain.strategy.model.req.DrawReq;
-import org.example.domain.strategy.model.res.DrawResult;
-import org.example.domain.strategy.respository.impl.StrategyRepository;
+
+import org.example.domain.strategy.respository.IStrategyRepository;
 import org.example.domain.strategy.service.algorithm.IDrawAlgorithm;
 import org.example.domain.strategy.service.draw.AbstractDrawBase;
-import org.example.domain.strategy.service.draw.IDrawExec;
-import org.example.infrastructure.po.Award;
-import org.example.infrastructure.po.Strategy;
-import org.example.infrastructure.po.StrategyDetail;
+
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -25,7 +21,7 @@ public class DrawExecImpl extends AbstractDrawBase {
     private Logger logger = LoggerFactory.getLogger(DrawExecImpl.class);
 
     @Resource
-    private StrategyRepository strategyRepository;
+    private IStrategyRepository strategyRepository;
 
 
     @Override

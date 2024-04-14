@@ -6,7 +6,7 @@ public class DrawAwardInfo {
     /**
      * 奖品ID
      */
-    private Long rewardId;
+    private String rewardId;
 
     /**
      * 奖品名称
@@ -16,16 +16,16 @@ public class DrawAwardInfo {
     public DrawAwardInfo() {
     }
 
-    public DrawAwardInfo(Long rewardId, String awardName) {
+    public DrawAwardInfo(String rewardId, String awardName) {
         this.rewardId = rewardId;
         this.awardName = awardName;
     }
 
-    public Long getRewardId() {
+    public String getRewardId() {
         return rewardId;
     }
 
-    public void setRewardId(Long rewardId) {
+    public void setRewardId(String rewardId) {
         this.rewardId = rewardId;
     }
 

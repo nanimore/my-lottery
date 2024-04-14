@@ -8,59 +8,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d39566-4ed6-4685-be18-5a250af7cd52" name="Changes" comment="发奖领域，活动领域">
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/model/aggregates/ActivityConfigRich.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/model/req/ActivityConfigReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/model/vo/ActivityVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/model/vo/AlterStateVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/model/vo/AwardVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/model/vo/StrategyDetailVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/model/vo/StrategyVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/repository/IActivityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/deploy/IActivityDeploy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/deploy/impl/ActivityDeployImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/partake/IActivityPartake.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/stateflow/AbstractState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/stateflow/IStateHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/stateflow/StateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/stateflow/event/ArraignmentState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/stateflow/event/CloseState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/stateflow/event/DoingState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/stateflow/event/EditingState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/stateflow/event/OpenState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/stateflow/event/PassState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/stateflow/event/RefuseState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/stateflow/impl/StateHandlerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/model/req/GoodsReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/model/res/DistributionRes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/model/vo/ShippingAddress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/repository/IAwardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/DistributionBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/IDistributionGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/impl/CouponGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/impl/DescGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/impl/PhysicalGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/impl/RedeemCodeGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/model/vo/AwardBriefVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/model/vo/StrategyBriefVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/model/vo/StrategyDetailBriefVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/repository/ActivityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/repository/AwardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/repository/StrategyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/support/ids/IIdGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/support/ids/IdContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/support/ids/policy/RandomNumeric.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/support/ids/policy/ShortCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/support/ids/policy/SnowFlake.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-common/src/main/java/org/example/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-common/src/main/java/org/example/common/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-common/src/main/java/org/example/common/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-common/src/main/java/org/example/common/Result.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lottery-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/model/aggregates/StrategyRich.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/model/aggregates/StrategyRich.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/respository/IStrategyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/respository/IStrategyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/respository/impl/StrategyRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IActivityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IActivityDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IAwardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IAwardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IStrategyDetailDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IStrategyDetailDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/po/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/po/Strategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/Activity_Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/Activity_Mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/Strategy_Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/Strategy_Mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/model/vo/DrawAwardInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/model/vo/DrawAwardInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/service/draw/AbstractDrawBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/service/draw/AbstractDrawBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/service/draw/DrawStrategySupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/service/draw/DrawStrategySupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/service/draw/impl/DrawExecImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/service/draw/impl/DrawExecImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/test/java/org/example/domain/strategy/service/IDrawAlgorithmTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/test/java/org/example/domain/strategy/service/IDrawAlgorithmTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +69,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Projects/IDEA/my-lottery/my-lottery/lottery-infrastructure/src/main/java/org/example/infrastructure",
+    "last_opened_file_path": "D:/Projects/IDEA/my-lottery/my-lottery/lottery-domain/src/main/java/org/example/domain",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -128,11 +89,11 @@
       <recent name="org.example.domain.strategy.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-domain\src\main\java\org\example\domain" />
       <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-infrastructure\src\main\java\org\example\infrastructure" />
       <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-domain\src\main\java\org\example\domain\activity\service" />
       <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-domain\src\main\java\org\example\domain\activity\model\vo" />
       <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-domain\src\main\java\org\example\domain\strategy\award\service" />
-      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-common\src\main\java\org\example\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-domain\src" />
@@ -155,7 +116,7 @@
       <recent name="org.example.domain.activity.model.aggregates" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DaoTest.teststrategyDao">
+  <component name="RunManager" selected="JUnit.IDrawAlgorithmTest.test_snowflake">
     <configuration name="DaoTest.teststrategyDao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lottery-interfaces" />
       <extension name="coverage">
@@ -167,38 +128,6 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DaoTest" />
       <option name="METHOD_NAME" value="teststrategyDao" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IDrawAlgorithmTest.testDeduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lottery-interfaces" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.IDrawAlgorithmTest" />
-      <option name="METHOD_NAME" value="testDeduct" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IDrawAlgorithmTest.testIStrategyRepository (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lottery-interfaces" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.IDrawAlgorithmTest" />
-      <option name="METHOD_NAME" value="testIStrategyRepository" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -236,6 +165,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IDrawAlgorithmTest.test_snowflak" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lottery-domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.domain.strategy.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.domain.strategy.service" />
+      <option name="MAIN_CLASS_NAME" value="org.example.domain.strategy.service.IDrawAlgorithmTest" />
+      <option name="METHOD_NAME" value="test_snowflak" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IDrawAlgorithmTest.test_snowflake" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lottery-domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.domain.strategy.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.domain.strategy.service" />
+      <option name="MAIN_CLASS_NAME" value="org.example.domain.strategy.service.IDrawAlgorithmTest" />
+      <option name="METHOD_NAME" value="test_snowflake" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LotteryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="lottery-interfaces" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.LotteryApplication" />
@@ -245,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IDrawAlgorithmTest.test_snowflake" />
+        <item itemvalue="JUnit.IDrawAlgorithmTest.test_snowflak" />
         <item itemvalue="JUnit.DaoTest.teststrategyDao" />
         <item itemvalue="JUnit.IDrawAlgorithmTest.test_drawExec" />
         <item itemvalue="JUnit.IDrawAlgorithmTest.test_randomDrawAlgorithm" />
-        <item itemvalue="JUnit.IDrawAlgorithmTest.testDeduct" />
-        <item itemvalue="JUnit.IDrawAlgorithmTest.testIStrategyRepository (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +223,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712301677772</updated>
       <workItem from="1712301678845" duration="20238000" />
-      <workItem from="1712628165351" duration="53685000" />
+      <workItem from="1712628165351" duration="60877000" />
     </task>
     <task id="LOCAL-00001" summary="跑通RPC">
       <option name="closed" value="true" />
@@ -280,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712753053471</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="发奖领域，活动领域">
+      <option name="closed" value="true" />
+      <created>1712905630478</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712905630478</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

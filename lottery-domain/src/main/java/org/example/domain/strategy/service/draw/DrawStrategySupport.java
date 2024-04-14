@@ -2,8 +2,8 @@ package org.example.domain.strategy.service.draw;
 
 
 import org.example.domain.strategy.model.aggregates.StrategyRich;
+import org.example.domain.strategy.model.vo.AwardBriefVO;
 import org.example.domain.strategy.respository.IStrategyRepository;
-import org.example.infrastructure.po.Award;
 
 import javax.annotation.Resource;
 
@@ -29,7 +29,7 @@ public class DrawStrategySupport extends DrawConfig{
      * @param awardId 奖品ID
      * @return 中奖详情
      */
-    protected Award queryAwardInfoByAwardId(String awardId){
+    protected AwardBriefVO queryAwardInfoByAwardId(String awardId){
         return strategyRepository.queryAwardInfo(awardId);
     }
 
