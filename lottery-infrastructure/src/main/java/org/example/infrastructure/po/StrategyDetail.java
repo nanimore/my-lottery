@@ -33,9 +33,9 @@ public class StrategyDetail implements Serializable {
     private String awardId;
 
     /**
-     * 奖品描述
+     * 奖品名称
      */
-    private String awardDesc;
+    private String awardName;
 
     /**
      * 奖品库存
@@ -80,7 +80,7 @@ public class StrategyDetail implements Serializable {
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getStrategyId() == null ? other.getStrategyId() == null : this.getStrategyId().equals(other.getStrategyId()))
             && (this.getAwardId() == null ? other.getAwardId() == null : this.getAwardId().equals(other.getAwardId()))
-            && (this.getAwardDesc() == null ? other.getAwardDesc() == null : this.getAwardDesc().equals(other.getAwardDesc()))
+            && (this.getAwardName() == null ? other.getAwardName() == null : this.getAwardName().equals(other.getAwardName()))
             && (this.getAwardCount() == null ? other.getAwardCount() == null : this.getAwardCount().equals(other.getAwardCount()))
             && (this.getAwardSurplusCount() == null ? other.getAwardSurplusCount() == null : this.getAwardSurplusCount().equals(other.getAwardSurplusCount()))
             && (this.getAwardRate() == null ? other.getAwardRate() == null : this.getAwardRate().equals(other.getAwardRate()))
@@ -95,7 +95,7 @@ public class StrategyDetail implements Serializable {
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getStrategyId() == null) ? 0 : getStrategyId().hashCode());
         result = prime * result + ((getAwardId() == null) ? 0 : getAwardId().hashCode());
-        result = prime * result + ((getAwardDesc() == null) ? 0 : getAwardDesc().hashCode());
+        result = prime * result + ((getAwardName() == null) ? 0 : getAwardName().hashCode());
         result = prime * result + ((getAwardCount() == null) ? 0 : getAwardCount().hashCode());
         result = prime * result + ((getAwardSurplusCount() == null) ? 0 : getAwardSurplusCount().hashCode());
         result = prime * result + ((getAwardRate() == null) ? 0 : getAwardRate().hashCode());
@@ -113,7 +113,7 @@ public class StrategyDetail implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", strategyId=").append(strategyId);
         sb.append(", awardId=").append(awardId);
-        sb.append(", awardDesc=").append(awardDesc);
+        sb.append(", awardName=").append(awardName);
         sb.append(", awardCount=").append(awardCount);
         sb.append(", awardSurplusCount=").append(awardSurplusCount);
         sb.append(", awardRate=").append(awardRate);

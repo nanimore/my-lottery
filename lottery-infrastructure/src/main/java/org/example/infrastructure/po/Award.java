@@ -31,10 +31,6 @@ public class Award implements Serializable {
      */
     private Integer awardType;
 
-    /**
-     * 奖品数量
-     */
-    private Integer awardCount;
 
     /**
      * 奖品名称
@@ -74,7 +70,6 @@ public class Award implements Serializable {
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getAwardId() == null ? other.getAwardId() == null : this.getAwardId().equals(other.getAwardId()))
             && (this.getAwardType() == null ? other.getAwardType() == null : this.getAwardType().equals(other.getAwardType()))
-            && (this.getAwardCount() == null ? other.getAwardCount() == null : this.getAwardCount().equals(other.getAwardCount()))
             && (this.getAwardName() == null ? other.getAwardName() == null : this.getAwardName().equals(other.getAwardName()))
             && (this.getAwardContent() == null ? other.getAwardContent() == null : this.getAwardContent().equals(other.getAwardContent()))
             && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
@@ -88,7 +83,6 @@ public class Award implements Serializable {
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getAwardId() == null) ? 0 : getAwardId().hashCode());
         result = prime * result + ((getAwardType() == null) ? 0 : getAwardType().hashCode());
-        result = prime * result + ((getAwardCount() == null) ? 0 : getAwardCount().hashCode());
         result = prime * result + ((getAwardName() == null) ? 0 : getAwardName().hashCode());
         result = prime * result + ((getAwardContent() == null) ? 0 : getAwardContent().hashCode());
         result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
@@ -105,7 +99,6 @@ public class Award implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", awardId=").append(awardId);
         sb.append(", awardType=").append(awardType);
-        sb.append(", awardCount=").append(awardCount);
         sb.append(", awardName=").append(awardName);
         sb.append(", awardContent=").append(awardContent);
         sb.append(", createTime=").append(createTime);

@@ -33,10 +33,10 @@ public class StrategyRepository implements IStrategyRepository {
     @Override
     public StrategyRich queryStrategyRich(Long strategyId) {
         QueryWrapper<Strategy> strategyQueryWrapper = new QueryWrapper<>();
-        strategyQueryWrapper.eq("strategyId", strategyId);
+        strategyQueryWrapper.eq("strategy_id", strategyId);
         Strategy strategy = strategyDao.selectOne(strategyQueryWrapper);
         QueryWrapper<StrategyDetail> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("strategyId", strategyId);
+        queryWrapper.eq("strategy_id", strategyId);
         List<StrategyDetail> strategyDetails = strategyDetailDao.selectList(queryWrapper);
 
         StrategyBriefVO strategyBriefVO = new StrategyBriefVO();
@@ -68,7 +68,7 @@ public class StrategyRepository implements IStrategyRepository {
     public List<String> queryNoStockStrategyAwardList(Long strategyId) {
 
         QueryWrapper<StrategyDetail> qw = new QueryWrapper<>();
-        qw.eq("strategyId", strategyId).le("awardSurplusCount",0);
+        qw.eq("strategy_id", strategyId).le("award_surplus_count",0);
         List<StrategyDetail> strategyDetails = strategyDetailDao.selectList(qw);
 
         List<String> awards = strategyDetails.stream().map(StrategyDetail::getAwardId).collect(Collectors.toList());

@@ -16,10 +16,5 @@
         <result column="update_time" property="updateTime"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
-        id,strategy_id,strategy_desc,
-        strategy_mode,grant_type,grant_date,
-        ext_info,create_time,update_time
-    </sql>
 
 </mapper>

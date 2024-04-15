@@ -20,7 +20,7 @@ public class Strategy {
     /**
      * 策略ID
      */
-    @TableField("strategy_id")
+//    @TableField("strategy_id")
     private Long strategyId;
     /**
      *策略描述

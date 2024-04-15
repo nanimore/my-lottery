@@ -1,40 +1,53 @@
 package org.example.domain.strategy.model.vo;
 
 
+import lombok.Data;
+
+import java.util.Date;
+
+@Data
 public class DrawAwardInfo {
 
     /**
      * 奖品ID
      */
-    private String rewardId;
+    private String awardId;
 
     /**
      * 奖品名称
      */
     private String awardName;
 
+    /**
+     * 奖品类型（1:文字描述、2:兑换码、3:优惠券、4:实物奖品）
+     */
+    private Integer awardType;
+    /**
+     * 奖品内容「描述、奖品码、sku」
+     */
+    private String awardContent;
+
+    /**
+     * 策略方式（1:单项概率、2:总体概率）
+     */
+    private Integer strategyMode;
+
+    /**
+     * 发放奖品方式（1:即时、2:定时[含活动结束]、3:人工）
+     */
+    private Integer grantType;
+    /**
+     * 发奖时间
+     */
+    private Date grantDate;
+
     public DrawAwardInfo() {
     }
 
-    public DrawAwardInfo(String rewardId, String awardName) {
-        this.rewardId = rewardId;
+    public DrawAwardInfo(String awardId, String awardName) {
+        this.awardId = awardId;
         this.awardName = awardName;
     }
 
-    public String getRewardId() {
-        return rewardId;
-    }
-
-    public void setRewardId(String rewardId) {
-        this.rewardId = rewardId;
-    }
-
-    public String getAwardName() {
-        return awardName;
-    }
-
-    public void setAwardName(String awardName) {
-        this.awardName = awardName;
-    }
 
 }

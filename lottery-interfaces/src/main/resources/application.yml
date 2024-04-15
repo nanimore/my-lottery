@@ -1,12 +1,19 @@
 server:
   port: 8088
 
+
 spring:
   datasource:
     username: root
     password: 123456
     url: jdbc:mysql://127.0.0.1:3306/lottery?useUnicode=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+#logging:
+#  level:
+#    root: debug #基础日志级别
+#    com.baidu.pk1: info     #pk1包下的类使用info级别
+#    com.baidu.pk2: debug    #pk2包下的类使用debug级别
 
 #mybatis:
 #  mapper-locations: classpath:/mybatis/mapper/*.xml
