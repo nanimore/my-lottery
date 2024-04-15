@@ -1,9 +1,10 @@
-package org.example;
+package org.example.test;
 
 
 import org.example.domain.strategy.model.aggregates.StrategyRich;
 import org.example.domain.strategy.model.req.DrawReq;
 import org.example.domain.strategy.model.vo.AwardRateInfo;
+import org.example.domain.strategy.model.vo.StrategyDetailBriefVO;
 import org.example.domain.strategy.respository.IStrategyRepository;
 import org.example.domain.strategy.service.algorithm.IDrawAlgorithm;
 import org.example.domain.strategy.service.draw.IDrawExec;
@@ -42,7 +43,7 @@ public class IDrawAlgorithmTest {
         StrategyRich strategyRich = strategyRepository.queryStrategyRich(strategyId);
         List<AwardRateInfo> awardRateInfoList = new ArrayList<>();
 
-        for (StrategyDetail strategyDetail : strategyRich.getStrategyDetailList()) {
+        for (StrategyDetailBriefVO strategyDetail : strategyRich.getStrategyDetailList()) {
             AwardRateInfo awardRateInfo = new AwardRateInfo();
             awardRateInfo.setAwardId(strategyDetail.getAwardId());
             awardRateInfo.setAwardRate(strategyDetail.getAwardRate());

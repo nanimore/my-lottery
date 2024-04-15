@@ -1,4 +1,4 @@
-package org.example;
+package org.example.test;
 
 import org.example.infrastructure.dao.IActivityDao;
 import org.example.infrastructure.dao.IStrategyDao;
