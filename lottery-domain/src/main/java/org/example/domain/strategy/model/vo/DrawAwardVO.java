@@ -57,6 +57,8 @@ public class DrawAwardVO {
         this.awardContent = awardContent;
     }
 
+
+
     public String getuId() {
         return uId;
     }
