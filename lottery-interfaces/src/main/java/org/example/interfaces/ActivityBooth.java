@@ -9,7 +9,10 @@ import org.example.infrastructure.po.Activity;
 import org.example.rpc.IActivityBooth;
 import org.example.rpc.dto.ActivityDto;
 import org.example.rpc.req.ActivityReq;
+import org.example.rpc.req.DrawReq;
+import org.example.rpc.req.QuantificationDrawReq;
 import org.example.rpc.res.ActivityRes;
+import org.example.rpc.res.DrawRes;
 
 import javax.annotation.Resource;
 
