@@ -1,4 +1,4 @@
-package org.example.application.mq;
+package org.example.application.mq.demo;
 
 import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;
@@ -15,9 +15,9 @@ import javax.annotation.Resource;
  * @description: 消息生产者
 */
 @Component
-public class KafkaProducer {
+public class KafkaProducerDemo {
 
-    private Logger logger = LoggerFactory.getLogger(KafkaProducer.class);
+    private Logger logger = LoggerFactory.getLogger(KafkaProducerDemo.class);
 
     @Resource
     private KafkaTemplate<String, Object> kafkaTemplate;

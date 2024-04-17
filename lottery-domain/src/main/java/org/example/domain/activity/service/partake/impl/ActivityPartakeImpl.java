@@ -7,6 +7,7 @@ import org.example.common.Result;
 import org.example.domain.activity.model.req.PartakeReq;
 import org.example.domain.activity.model.vo.ActivityBillVO;
 import org.example.domain.activity.model.vo.DrawOrderVO;
+import org.example.domain.activity.model.vo.UserTakeActivityVO;
 import org.example.domain.activity.repository.IUserTakeActivityRepository;
 import org.example.domain.activity.service.partake.BaseActivityPartake;
 import org.example.domain.support.ids.IIdGenerator;
@@ -38,6 +39,11 @@ public class ActivityPartakeImpl extends BaseActivityPartake {
 
     @Resource
     private IDBRouterStrategy dbRouter;
+
+    @Override
+    protected UserTakeActivityVO queryNoConsumedTakeActivityOrder(Long activityId, String uId) {
+        return userTakeActivityRepository.queryNoConsumedTakeActivityOrder(activityId, uId);
+    }
 
     @Override
     protected Result checkActivityBill(PartakeReq partake, ActivityBillVO bill) {
@@ -79,22 +85,21 @@ public class ActivityPartakeImpl extends BaseActivityPartake {
     }
 
     @Override
-    protected Result grabActivity(PartakeReq partake, ActivityBillVO bill) {
+    protected Result grabActivity(PartakeReq partake, ActivityBillVO bill, Long takeId) {
         try {
             dbRouter.doRouter(partake.getuId());
             return transactionTemplate.execute(status -> {
                 try {
                     // 扣减个人已参与次数
-                    int updateCount = userTakeActivityRepository.subtractionLeftCount(bill.getActivityId(), bill.getActivityName(), bill.getTakeCount(), bill.getUserTakeLeftCount(), partake.getuId(), partake.getPartakeDate());
+                    int updateCount = userTakeActivityRepository.subtractionLeftCount(bill.getActivityId(), bill.getActivityName(), bill.getTakeCount(), bill.getUserTakeLeftCount(), partake.getuId());
                     if (0 == updateCount) {
                         status.setRollbackOnly();
                         logger.error("领取活动，扣减个人已参与次数失败 activityId：{} uId：{}", partake.getActivityId(), partake.getuId());
                         return Result.buildResult(Constants.ResponseCode.NO_UPDATE);
                     }
 
-                    // 插入领取活动信息
-                    Long takeId = idGeneratorMap.get(Constants.Ids.SnowFlake).nextId();
-                    userTakeActivityRepository.takeActivity(bill.getActivityId(), bill.getActivityName(), bill.getTakeCount(), bill.getUserTakeLeftCount(), partake.getuId(), partake.getPartakeDate(), takeId);
+                    // 写入领取活动记录
+                    userTakeActivityRepository.takeActivity(bill.getActivityId(), bill.getActivityName(), bill.getStrategyId(), bill.getTakeCount(), bill.getUserTakeLeftCount(), partake.getuId(), partake.getPartakeDate(), takeId);
                 } catch (DuplicateKeyException e) {
                     status.setRollbackOnly();
                     logger.error("领取活动，唯一索引冲突 activityId：{} uId：{}", partake.getActivityId(), partake.getuId(), e);
@@ -136,5 +141,9 @@ public class ActivityPartakeImpl extends BaseActivityPartake {
 
     }
 
+    @Override
+    public void updateInvoiceMqState(String uId, Long orderId, Integer mqState) {
+        userTakeActivityRepository.updateInvoiceMqState(uId, orderId, mqState);
+    }
 
 }

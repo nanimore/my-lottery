@@ -7,16 +7,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55d39566-4ed6-4685-be18-5a250af7cd52" name="Changes" comment="门面接口封装和对象转换">
-      <change afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/mq/KafkaConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/mq/KafkaProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/application/KafkaProducerTest.java" afterDir="false" />
+    <list default="true" id="55d39566-4ed6-4685-be18-5a250af7cd52" name="Changes" comment="测试MQ消息组件Kafka服务环境">
+      <change afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/mq/consumer/LotteryInvoiceListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/mq/producer/KafkaProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/model/vo/InvoiceVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/repository/IOrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/factory/DistributionGoodsFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/factory/GoodsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-application/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/model/vo/DrawAwardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/model/vo/DrawAwardVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/service/draw/AbstractDrawBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/strategy/service/draw/AbstractDrawBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sql/lottery.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/lottery.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sql/lottery_01.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/lottery_01.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sql/lottery_02.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/lottery_02.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/mq/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/mq/demo/KafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/mq/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/mq/demo/KafkaProducerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/impl/ActivityProcessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/impl/ActivityProcessImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/res/DrawProcessResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/res/DrawProcessResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-common/src/main/java/org/example/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-common/src/main/java/org/example/common/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/repository/IUserTakeActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/repository/IUserTakeActivityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/partake/BaseActivityPartake.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/partake/BaseActivityPartake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/partake/IActivityPartake.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/partake/IActivityPartake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/partake/impl/ActivityPartakeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/partake/impl/ActivityPartakeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/model/req/GoodsReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/model/req/GoodsReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/repository/IAwardRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/DistributionBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/goods/DistributionBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/IDistributionGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/goods/IDistributionGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/impl/CouponGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/goods/impl/CouponGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/impl/DescGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/goods/impl/DescGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/impl/PhysicalGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/goods/impl/PhysicalGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/impl/RedeemCodeGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/award/service/goods/impl/RedeemCodeGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IUserStrategyExportDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IUserStrategyExportDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IUserTakeActivityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IUserTakeActivityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/po/UserStrategyExport.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/po/UserStrategyExport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/repository/AwardRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/repository/UserTakeActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/repository/UserTakeActivityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/UserStrategyExport_Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/UserStrategyExport_Mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/UserTakeActivity_Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/UserTakeActivity_Mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/application/ActivityProcessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/application/ActivityProcessTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/application/KafkaProducerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/application/KafkaProducerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/dao/UserStrategyExportDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/dao/UserStrategyExportDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +67,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -67,7 +97,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Projects/IDEA/my-lottery/my-lottery/lottery-application/src/main/java/org/example/application",
+    "last_opened_file_path": "D:/Projects/IDEA/my-lottery/my-lottery/doc/sql",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,11 +117,11 @@
       <recent name="org.example.domain.strategy.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\doc\sql" />
+      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-domain\src\main\java\org\example\domain\award\service\factory" />
+      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-application\src\main\java\org\example\application\mq" />
       <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-application\src\main\java\org\example\application" />
       <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-interfaces\src\test\java\org\example\test" />
-      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-interfaces\src\main\java\org\example\interfaces" />
-      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-rpc\src\main\java\org\example\rpc\req" />
-      <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-interfaces\src\main\resources\mybatis\mapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\IDEA\my-lottery\my-lottery\lottery-domain\src" />
@@ -107,14 +137,14 @@
       <recent name="org.example.domain.strategy.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.infrastructure.repository" />
+      <recent name="org.example.domain.award.repository" />
+      <recent name="org.example.domain.activity.model.vo" />
       <recent name="org.example.test.application" />
       <recent name="org.example.application.process.res" />
-      <recent name="org.example.domain.strategy.model.vo" />
-      <recent name="org.example.rpc" />
-      <recent name="org.example.rpc.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.KafkaProducerTest.test_send">
+  <component name="RunManager" selected="JUnit.ActivityProcessTest.test_doDrawProcess2">
     <configuration name="ActivityProcessTest.test_doDrawProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lottery-interfaces" />
       <extension name="coverage">
@@ -131,17 +161,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ActivityTest.test_activityPartake" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ActivityProcessTest.test_doDrawProcess2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lottery-interfaces" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.test.domain.*" />
+          <option name="PATTERN" value="org.example.test.application.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.test.domain" />
-      <option name="MAIN_CLASS_NAME" value="org.example.test.domain.ActivityTest" />
-      <option name="METHOD_NAME" value="test_activityPartake" />
+      <option name="PACKAGE_NAME" value="org.example.test.application" />
+      <option name="MAIN_CLASS_NAME" value="org.example.test.application.ActivityProcessTest" />
+      <option name="METHOD_NAME" value="test_doDrawProcess2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,23 +193,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RuleTest.test_process" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KafkaProducerTest.test_send2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lottery-interfaces" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.test.domain.*" />
+          <option name="PATTERN" value="org.example.test.application.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.test.domain" />
-      <option name="MAIN_CLASS_NAME" value="org.example.test.domain.RuleTest" />
-      <option name="METHOD_NAME" value="test_process" />
+      <option name="PACKAGE_NAME" value="org.example.test.application" />
+      <option name="MAIN_CLASS_NAME" value="org.example.test.application.KafkaProducerTest" />
+      <option name="METHOD_NAME" value="test_send2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserStrategyExportDaoTest.test_select" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserStrategyExportDaoTest.test_userStrategyExportDao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lottery-interfaces" />
       <extension name="coverage">
         <pattern>
@@ -189,7 +219,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example.test.dao" />
       <option name="MAIN_CLASS_NAME" value="org.example.test.dao.UserStrategyExportDaoTest" />
-      <option name="METHOD_NAME" value="test_select" />
+      <option name="METHOD_NAME" value="test_userStrategyExportDao" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -204,11 +234,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.KafkaProducerTest.test_send" />
-        <item itemvalue="JUnit.RuleTest.test_process" />
+        <item itemvalue="JUnit.ActivityProcessTest.test_doDrawProcess2" />
+        <item itemvalue="JUnit.UserStrategyExportDaoTest.test_userStrategyExportDao" />
         <item itemvalue="JUnit.ActivityProcessTest.test_doDrawProcess" />
-        <item itemvalue="JUnit.ActivityTest.test_activityPartake" />
-        <item itemvalue="JUnit.UserStrategyExportDaoTest.test_select" />
+        <item itemvalue="JUnit.KafkaProducerTest.test_send2" />
+        <item itemvalue="JUnit.KafkaProducerTest.test_send" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +251,9 @@
       <option name="presentableId" value="Default" />
       <updated>1712301677772</updated>
       <workItem from="1712301678845" duration="20238000" />
-      <workItem from="1712628165351" duration="101276000" />
+      <workItem from="1712628165351" duration="103361000" />
+      <workItem from="1713317489020" duration="3355000" />
+      <workItem from="1713323757538" duration="14188000" />
     </task>
     <task id="LOCAL-00001" summary="跑通RPC">
       <option name="closed" value="true" />
@@ -295,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713238614766</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="测试MQ消息组件Kafka服务环境">
+      <option name="closed" value="true" />
+      <created>1713260823126</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713260823126</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +362,8 @@
     <MESSAGE value="应用层编排抽奖过程" />
     <MESSAGE value="规则引擎量化人群参与活动" />
     <MESSAGE value="门面接口封装和对象转换" />
-    <option name="LAST_COMMIT_MESSAGE" value="门面接口封装和对象转换" />
+    <MESSAGE value="测试MQ消息组件Kafka服务环境" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试MQ消息组件Kafka服务环境" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -21,7 +21,7 @@ public interface IUserTakeActivityRepository {
      * @param partakeDate       领取时间
      * @return                  更新结果
      */
-    int subtractionLeftCount(Long activityId, String activityName, Integer takeCount, Integer userTakeLeftCount, String uId, Date partakeDate);
+    int subtractionLeftCount(Long activityId, String activityName, Integer takeCount, Integer userTakeLeftCount, String uId);
 
     /**
      * 领取活动
@@ -34,7 +34,7 @@ public interface IUserTakeActivityRepository {
      * @param takeDate          领取时间
      * @param takeId            领取ID
      */
-    void takeActivity(Long activityId, String activityName, Integer takeCount, Integer userTakeLeftCount, String uId, Date takeDate, Long takeId);
+    void takeActivity(Long activityId, String activityName, Long strategyId, Integer takeCount, Integer userTakeLeftCount, String uId, Date takeDate, Long takeId);
 
     /**
      * 锁定活动领取记录
@@ -61,5 +61,15 @@ public interface IUserTakeActivityRepository {
      * @return              领取单
      */
     UserTakeActivityVO queryNoConsumedTakeActivityOrder(Long activityId, String uId);
+
+    /**
+     * 更新发货单MQ状态
+     *
+     * @param uId     用户ID
+     * @param orderId 订单ID
+     * @param mqState MQ 发送状态
+     */
+    void updateInvoiceMqState(String uId, Long orderId, Integer mqState);
+
 
 }

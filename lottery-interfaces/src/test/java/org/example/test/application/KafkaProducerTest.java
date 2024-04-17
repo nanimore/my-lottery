@@ -1,7 +1,10 @@
 package org.example.test.application;
 
 
-import org.example.application.mq.KafkaProducer;
+import org.example.application.mq.demo.KafkaProducerDemo;
+import org.example.application.mq.producer.KafkaProducer;
+import org.example.common.Constants;
+import org.example.domain.activity.model.vo.InvoiceVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -23,12 +26,35 @@ public class KafkaProducerTest {
     @Resource
     private KafkaProducer kafkaProducer;
 
+    @Resource
+    private KafkaProducerDemo kafkaProducerDemo;
+
     @Test
     public void test_send() throws InterruptedException {
         // 循环发送消息
         while (true) {
-            kafkaProducer.send("你好，我是Lottery 001");
+            kafkaProducerDemo.send("你好，我是Lottery 001");
             Thread.sleep(3500);
+        }
+    }
+
+    @Test
+    public void test_send2() throws InterruptedException {
+
+        InvoiceVO invoice = new InvoiceVO();
+        invoice.setuId("fustack");
+        invoice.setOrderId(1444540456057864192L);
+        invoice.setAwardId("3");
+        invoice.setAwardType(Constants.AwardType.DESC.getCode());
+        invoice.setAwardName("Code");
+        invoice.setAwardContent("苹果电脑");
+        invoice.setShippingAddress(null);
+        invoice.setExtInfo(null);
+
+        kafkaProducer.sendLotteryInvoice(invoice);
+
+        while (true){
+            Thread.sleep(10000);
         }
     }
 }

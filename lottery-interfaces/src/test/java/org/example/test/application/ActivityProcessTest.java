@@ -37,4 +37,16 @@ public class ActivityProcessTest {
         logger.info("测试结果：{}", JSON.toJSONString(drawProcessResult));
     }
 
+
+    @Test
+    public void test_doDrawProcess2() {
+        DrawProcessReq req = new DrawProcessReq();
+        req.setuId("xiaofuge");
+        req.setActivityId(100001L);
+        DrawProcessResult drawProcessResult = activityProcess.doDrawProcess(req);
+        logger.info("请求入参：{}", JSON.toJSONString(req));
+        logger.info("测试结果：{}", JSON.toJSONString(drawProcessResult));
+    }
+
+
 }

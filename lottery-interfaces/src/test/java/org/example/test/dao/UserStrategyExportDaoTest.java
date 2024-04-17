@@ -2,6 +2,7 @@ package org.example.test.dao;
 
 
 import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.databind.ser.impl.PropertyBasedObjectIdGenerator;
 import org.example.common.Constants;
 import org.example.domain.support.ids.IIdGenerator;
 import org.example.infrastructure.dao.IUserStrategyExportDao;
@@ -56,6 +57,15 @@ public class UserStrategyExportDaoTest {
     public void test_select() {
         UserStrategyExport userStrategyExport = userStrategyExportDao.queryUserStrategyExportByUId("Uhdgkw766120d");
         logger.info("测试结果：{}", JSON.toJSONString(userStrategyExport));
+    }
+
+    @Test
+    public void test_userStrategyExportDao() {
+        UserStrategyExport userStrategyExport = new UserStrategyExport();
+        userStrategyExport.setuId("xiaofuge");
+        userStrategyExport.setOrderId(1780510157219024896L);
+        userStrategyExport.setGrantState(1);
+        userStrategyExportDao.updateUserAwardState(userStrategyExport);
     }
 
 }

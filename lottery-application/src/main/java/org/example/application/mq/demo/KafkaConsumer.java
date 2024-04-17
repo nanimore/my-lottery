@@ -1,4 +1,4 @@
-package org.example.application.mq;
+package org.example.application.mq.demo;
 
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -20,7 +20,7 @@ public class KafkaConsumer {
 
     private Logger logger = LoggerFactory.getLogger(KafkaConsumer.class);
 
-    @KafkaListener(topics = KafkaProducer.TOPIC_TEST, groupId = KafkaProducer.TOPIC_GROUP)
+    @KafkaListener(topics = KafkaProducerDemo.TOPIC_TEST, groupId = KafkaProducerDemo.TOPIC_GROUP)
     public void topicTest(ConsumerRecord<?, ?> record, Acknowledgment ack, @Header(KafkaHeaders.RECEIVED_TOPIC) String topic) {
         Optional<?> message = Optional.ofNullable(record.value());
         if (message.isPresent()) {

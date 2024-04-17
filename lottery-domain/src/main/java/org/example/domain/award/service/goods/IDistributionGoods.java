@@ -1,4 +1,4 @@
-package org.example.domain.award.service;
+package org.example.domain.award.service.goods;
 
 
 import org.example.domain.award.model.req.GoodsReq;

@@ -1,6 +1,7 @@
 package org.example.infrastructure.repository;
 
 
+import org.example.common.Constants;
 import org.example.domain.activity.model.vo.DrawOrderVO;
 import org.example.domain.activity.model.vo.UserTakeActivityVO;
 import org.example.domain.activity.repository.IUserTakeActivityRepository;
@@ -10,7 +11,7 @@ import org.example.infrastructure.dao.IUserTakeActivityDao;
 import org.example.infrastructure.po.UserStrategyExport;
 import org.example.infrastructure.po.UserTakeActivity;
 import org.example.infrastructure.po.UserTakeActivityCount;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -18,7 +19,7 @@ import java.util.Date;
 /**
  * @description: 用户参与活动仓储
 */
-@Component
+@Repository
 public class UserTakeActivityRepository implements IUserTakeActivityRepository {
 
     @Resource
@@ -32,7 +33,7 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
 
 
     @Override
-    public int subtractionLeftCount(Long activityId, String activityName, Integer takeCount, Integer userTakeLeftCount, String uId, Date partakeDate) {
+    public int subtractionLeftCount(Long activityId, String activityName, Integer takeCount, Integer userTakeLeftCount, String uId) {
         if (null == userTakeLeftCount) {
             UserTakeActivityCount userTakeActivityCount = new UserTakeActivityCount();
             userTakeActivityCount.setuId(uId);
@@ -50,18 +51,22 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
     }
 
     @Override
-    public void takeActivity(Long activityId, String activityName, Integer takeCount, Integer userTakeLeftCount, String uId, Date takeDate, Long takeId) {
+    public void takeActivity(Long activityId, String activityName, Long strategyId, Integer takeCount, Integer userTakeLeftCount, String uId, Date takeDate, Long takeId) {
         UserTakeActivity userTakeActivity = new UserTakeActivity();
         userTakeActivity.setuId(uId);
         userTakeActivity.setTakeId(takeId);
         userTakeActivity.setActivityId(activityId);
         userTakeActivity.setActivityName(activityName);
         userTakeActivity.setTakeDate(takeDate);
+        // TODO 有bug，state值默认为null
+        userTakeActivity.setState(0);
         if (null == userTakeLeftCount) {
             userTakeActivity.setTakeCount(1);
         } else {
-            userTakeActivity.setTakeCount(takeCount - userTakeLeftCount);
+            userTakeActivity.setTakeCount(takeCount - userTakeLeftCount + 1);
         }
+        userTakeActivity.setStrategyId(strategyId);
+        userTakeActivity.setState(Constants.TaskState.NO_USED.getCode());
         String uuid = uId + "_" + activityId + "_" + userTakeActivity.getTakeCount();
         userTakeActivity.setUuid(uuid);
 
@@ -118,6 +123,16 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
         userTakeActivityVO.setState(noConsumedTakeActivityOrder.getState());
 
         return userTakeActivityVO;
+    }
+
+
+    @Override
+    public void updateInvoiceMqState(String uId, Long orderId, Integer mqState) {
+        UserStrategyExport userStrategyExport = new UserStrategyExport();
+        userStrategyExport.setuId(uId);
+        userStrategyExport.setOrderId(orderId);
+        userStrategyExport.setMqState(mqState);
+        userStrategyExportDao.updateInvoiceMqState(userStrategyExport);
     }
 
 }

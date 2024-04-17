@@ -2,7 +2,6 @@ package org.example.application.process.res;
 
 
 import org.example.common.Result;
-import org.example.domain.strategy.model.vo.DrawAwardInfo;
 import org.example.domain.strategy.model.vo.DrawAwardVO;
 
 /**
