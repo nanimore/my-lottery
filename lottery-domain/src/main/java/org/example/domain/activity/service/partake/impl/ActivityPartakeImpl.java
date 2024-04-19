@@ -5,6 +5,7 @@ import cn.bugstack.middleware.db.router.strategy.IDBRouterStrategy;
 import org.example.common.Constants;
 import org.example.common.Result;
 import org.example.domain.activity.model.req.PartakeReq;
+import org.example.domain.activity.model.res.StockResult;
 import org.example.domain.activity.model.vo.ActivityBillVO;
 import org.example.domain.activity.model.vo.DrawOrderVO;
 import org.example.domain.activity.model.vo.UserTakeActivityVO;
@@ -39,6 +40,16 @@ public class ActivityPartakeImpl extends BaseActivityPartake {
 
     @Resource
     private IDBRouterStrategy dbRouter;
+
+    @Override
+    protected StockResult subtractionActivityStockByRedis(String uId, Long activityId, Integer stockCount) {
+        return activityRepository.subtractionActivityStockByRedis(uId, activityId, stockCount);
+    }
+
+    @Override
+    protected void recoverActivityCacheStockByRedis(Long activityId, String tokenKey, String code) {
+        activityRepository.recoverActivityCacheStockByRedis(activityId, tokenKey, code);
+    }
 
     @Override
     protected UserTakeActivityVO queryNoConsumedTakeActivityOrder(Long activityId, String uId) {

@@ -18,6 +18,10 @@ public class ActivityBillVO {
     private Date beginDateTime;
     /** 结束时间 */
     private Date endDateTime;
+
+    /** 库存 */
+    private Integer stockCount;
+
     /** 库存剩余 */
     private Integer stockSurplusCount;
     /**
@@ -32,6 +36,14 @@ public class ActivityBillVO {
     private Integer takeCount;
     /** 已领取次数 */
     private Integer userTakeLeftCount;
+
+    public Integer getStockCount() {
+        return stockCount;
+    }
+
+    public void setStockCount(Integer stockCount) {
+        this.stockCount = stockCount;
+    }
 
     public String getuId() {
         return uId;
