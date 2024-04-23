@@ -1,4 +1,4 @@
-package org.example.application.process.res;
+package org.example.application.process.draw.res;
 
 
 import org.example.common.Result;

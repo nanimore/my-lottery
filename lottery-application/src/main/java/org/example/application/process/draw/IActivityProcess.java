@@ -1,9 +1,9 @@
-package org.example.application.process;
+package org.example.application.process.draw;
 
 
-import org.example.application.process.req.DrawProcessReq;
-import org.example.application.process.res.DrawProcessResult;
-import org.example.application.process.res.RuleQuantificationCrowdResult;
+import org.example.application.process.draw.req.DrawProcessReq;
+import org.example.application.process.draw.res.DrawProcessResult;
+import org.example.application.process.draw.res.RuleQuantificationCrowdResult;
 import org.example.domain.rule.model.req.DecisionMatterReq;
 
 /**

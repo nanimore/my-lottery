@@ -6,13 +6,10 @@ import org.example.common.Constants;
 import org.example.common.Result;
 import org.example.infrastructure.dao.IActivityDao;
 import org.example.infrastructure.po.Activity;
-import org.example.rpc.IActivityBooth;
-import org.example.rpc.dto.ActivityDto;
-import org.example.rpc.req.ActivityReq;
-import org.example.rpc.req.DrawReq;
-import org.example.rpc.req.QuantificationDrawReq;
-import org.example.rpc.res.ActivityRes;
-import org.example.rpc.res.DrawRes;
+import org.example.rpc.activity.booth.IActivityBooth;
+import org.example.rpc.activity.booth.dto.ActivityDto;
+import org.example.rpc.activity.booth.req.ActivityReq;
+import org.example.rpc.activity.booth.res.ActivityRes;
 
 import javax.annotation.Resource;
 

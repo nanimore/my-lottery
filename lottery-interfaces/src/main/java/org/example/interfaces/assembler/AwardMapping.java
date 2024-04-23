@@ -1,8 +1,7 @@
 package org.example.interfaces.assembler;
 
-
 import org.example.domain.strategy.model.vo.DrawAwardVO;
-import org.example.rpc.dto.AwardDTO;
+import org.example.rpc.activity.booth.dto.AwardDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;

@@ -2,10 +2,10 @@ package org.example.test.interfaces;
 
 
 import com.alibaba.fastjson.JSON;
-import org.example.rpc.ILotteryActivityBooth;
-import org.example.rpc.req.DrawReq;
-import org.example.rpc.req.QuantificationDrawReq;
-import org.example.rpc.res.DrawRes;
+import org.example.rpc.activity.booth.ILotteryActivityBooth;
+import org.example.rpc.activity.booth.req.DrawReq;
+import org.example.rpc.activity.booth.req.QuantificationDrawReq;
+import org.example.rpc.activity.booth.res.DrawRes;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

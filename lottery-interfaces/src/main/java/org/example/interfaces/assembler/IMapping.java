@@ -19,7 +19,7 @@ public interface IMapping<SOURCE, TARGET> {
      * @param var1 源
      * @return     结果
      */
-    @Mapping(target = "createTime", dateFormat = "yyyy-MM-dd HH:mm:ss")
+    // @Mapping(target = "createTime", dateFormat = "yyyy-MM-dd HH:mm:ss")
     TARGET sourceToTarget(SOURCE var1);
 
     /**

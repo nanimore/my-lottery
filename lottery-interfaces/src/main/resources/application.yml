@@ -101,6 +101,12 @@ mini-db-router:
         username: root
         password: 123456
 
+
+## 设置nacos的地址（配置中心）
+#nacos:
+#  discovery:
+#    server-addr: 127.0.0.1:8848
+
 # Dubbo 广播方式配置
 dubbo:
   application:
@@ -110,11 +116,13 @@ dubbo:
 #      unicast: false
   registry:
     address: N/A #multicast://10.157.101.166:1234
+#    address: nacos://127.0.0.1:8848
   protocol:
     name: dubbo
     port: 20880
+#    port: -1
   scan:
-    base-packages: org.example.rpc
+    base-packages: org.example.rpc.*
   provider:
     timeout: 1000000
 

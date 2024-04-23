@@ -1,9 +1,9 @@
-package org.example.rpc.res;
+package org.example.rpc.activity.booth.res;
 
 
 
 import org.example.common.Result;
-import org.example.rpc.dto.AwardDTO;
+import org.example.rpc.activity.booth.dto.AwardDTO;
 
 import java.io.Serializable;
 

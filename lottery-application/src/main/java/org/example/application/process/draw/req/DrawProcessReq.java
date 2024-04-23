@@ -1,4 +1,4 @@
-package org.example.application.process.req;
+package org.example.application.process.draw.req;
 
 /**
  * @description: 抽奖请求

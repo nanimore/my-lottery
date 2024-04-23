@@ -1,7 +1,9 @@
 package org.example.domain.activity.service.deploy;
 
 
+import org.example.domain.activity.model.aggregates.ActivityInfoLimitPageRich;
 import org.example.domain.activity.model.req.ActivityConfigReq;
+import org.example.domain.activity.model.req.ActivityInfoLimitPageReq;
 import org.example.domain.activity.model.vo.ActivityVO;
 
 import java.util.List;
@@ -35,5 +37,15 @@ public interface IActivityDeploy {
      * @return 待处理的活动集合
      */
     List<ActivityVO> scanToDoActivityList(Long id);
+
+
+    /**
+     * 查询活动分页查询聚合对象
+     *
+     * @param req 请求参数；分页、活动
+     * @return    查询结果
+     */
+    ActivityInfoLimitPageRich queryActivityInfoLimitPage(ActivityInfoLimitPageReq req);
+
 
 }

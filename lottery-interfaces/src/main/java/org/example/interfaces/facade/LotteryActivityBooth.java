@@ -2,19 +2,20 @@ package org.example.interfaces.facade;
 
 
 import com.alibaba.fastjson.JSON;
-import org.example.application.process.IActivityProcess;
-import org.example.application.process.req.DrawProcessReq;
-import org.example.application.process.res.DrawProcessResult;
-import org.example.application.process.res.RuleQuantificationCrowdResult;
+import org.apache.dubbo.config.annotation.Service;
+import org.example.application.process.draw.IActivityProcess;
+import org.example.application.process.draw.req.DrawProcessReq;
+import org.example.application.process.draw.res.DrawProcessResult;
+import org.example.application.process.draw.res.RuleQuantificationCrowdResult;
 import org.example.common.Constants;
 import org.example.domain.rule.model.req.DecisionMatterReq;
 import org.example.domain.strategy.model.vo.DrawAwardVO;
 import org.example.interfaces.assembler.IMapping;
-import org.example.rpc.ILotteryActivityBooth;
-import org.example.rpc.dto.AwardDTO;
-import org.example.rpc.req.DrawReq;
-import org.example.rpc.req.QuantificationDrawReq;
-import org.example.rpc.res.DrawRes;
+import org.example.rpc.activity.booth.ILotteryActivityBooth;
+import org.example.rpc.activity.booth.dto.AwardDTO;
+import org.example.rpc.activity.booth.req.DrawReq;
+import org.example.rpc.activity.booth.req.QuantificationDrawReq;
+import org.example.rpc.activity.booth.res.DrawRes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -27,7 +28,7 @@ import javax.annotation.Resource;
 /**
  * @description: 抽奖活动展台
 */
-@Controller
+@Service
 public class LotteryActivityBooth implements ILotteryActivityBooth {
 
     private Logger logger = LoggerFactory.getLogger(LotteryActivityBooth.class);

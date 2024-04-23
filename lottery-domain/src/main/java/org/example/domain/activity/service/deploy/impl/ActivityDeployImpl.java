@@ -3,7 +3,9 @@ package org.example.domain.activity.service.deploy.impl;
 
 import com.alibaba.fastjson.JSON;
 import org.example.domain.activity.model.aggregates.ActivityConfigRich;
+import org.example.domain.activity.model.aggregates.ActivityInfoLimitPageRich;
 import org.example.domain.activity.model.req.ActivityConfigReq;
+import org.example.domain.activity.model.req.ActivityInfoLimitPageReq;
 import org.example.domain.activity.model.vo.ActivityVO;
 import org.example.domain.activity.model.vo.AwardVO;
 import org.example.domain.activity.model.vo.StrategyDetailVO;
@@ -68,6 +70,11 @@ public class ActivityDeployImpl implements IActivityDeploy {
     @Override
     public List<ActivityVO> scanToDoActivityList(Long id) {
         return activityRepository.scanToDoActivityList(id);
+    }
+
+    @Override
+    public ActivityInfoLimitPageRich queryActivityInfoLimitPage(ActivityInfoLimitPageReq req) {
+        return activityRepository.queryActivityInfoLimitPage(req);
     }
 
 }

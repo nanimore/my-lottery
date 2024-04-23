@@ -1,9 +1,9 @@
-package org.example.rpc;
+package org.example.rpc.activity.booth;
 
 
-import org.example.rpc.req.DrawReq;
-import org.example.rpc.req.QuantificationDrawReq;
-import org.example.rpc.res.DrawRes;
+import org.example.rpc.activity.booth.req.DrawReq;
+import org.example.rpc.activity.booth.req.QuantificationDrawReq;
+import org.example.rpc.activity.booth.res.DrawRes;
 
 /**
  * @description: 抽奖活动展台接口

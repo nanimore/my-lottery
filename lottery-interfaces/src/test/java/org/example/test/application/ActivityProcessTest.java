@@ -2,9 +2,9 @@ package org.example.test.application;
 
 
 import com.alibaba.fastjson.JSON;
-import org.example.application.process.IActivityProcess;
-import org.example.application.process.req.DrawProcessReq;
-import org.example.application.process.res.DrawProcessResult;
+import org.example.application.process.draw.IActivityProcess;
+import org.example.application.process.draw.req.DrawProcessReq;
+import org.example.application.process.draw.res.DrawProcessResult;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

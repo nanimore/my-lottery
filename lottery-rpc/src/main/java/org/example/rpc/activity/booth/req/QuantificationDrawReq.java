@@ -1,4 +1,4 @@
-package org.example.rpc.req;
+package org.example.rpc.activity.booth.req;
 
 import java.util.Map;
 

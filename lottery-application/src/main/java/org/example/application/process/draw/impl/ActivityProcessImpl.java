@@ -1,9 +1,9 @@
-package org.example.application.process.impl;
+package org.example.application.process.draw.impl;
 
 
 
 import org.example.application.mq.producer.KafkaProducer;
-import org.example.application.process.res.RuleQuantificationCrowdResult;
+import org.example.application.process.draw.res.RuleQuantificationCrowdResult;
 import org.example.common.Constants;
 import org.example.common.Result;
 import org.example.domain.activity.model.req.PartakeReq;
@@ -17,14 +17,13 @@ import org.example.domain.rule.model.res.EngineResult;
 import org.example.domain.rule.service.engine.EngineFilter;
 import org.example.domain.strategy.model.req.DrawReq;
 import org.example.domain.strategy.model.res.DrawResult;
-import org.example.domain.strategy.model.vo.DrawAwardInfo;
 import org.example.domain.strategy.model.vo.DrawAwardVO;
 import org.example.domain.strategy.service.draw.IDrawExec;
 import org.example.domain.support.ids.IIdGenerator;
 
-import org.example.application.process.IActivityProcess;
-import org.example.application.process.req.DrawProcessReq;
-import org.example.application.process.res.DrawProcessResult;
+import org.example.application.process.draw.IActivityProcess;
+import org.example.application.process.draw.req.DrawProcessReq;
+import org.example.application.process.draw.res.DrawProcessResult;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 import org.springframework.util.concurrent.ListenableFuture;

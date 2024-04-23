@@ -4,7 +4,6 @@ import org.example.infrastructure.dao.IActivityDao;
 import org.example.infrastructure.dao.IStrategyDao;
 import org.example.infrastructure.po.Activity;
 import org.example.infrastructure.po.Strategy;
-import org.example.rpc.dto.ActivityDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
