@@ -22,7 +22,7 @@ import java.util.HashMap;
 @SpringBootTest
 public class RuleTest {
 
-    private Logger logger = LoggerFactory.getLogger(ActivityTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(ActivityTest.class);
 
     @Resource
     private EngineFilter engineFilter;

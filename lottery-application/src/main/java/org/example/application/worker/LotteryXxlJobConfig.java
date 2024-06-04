@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class LotteryXxlJobConfig {
 
-    private Logger logger = LoggerFactory.getLogger(LotteryXxlJobConfig.class);
+    private static final Logger logger = LoggerFactory.getLogger(LotteryXxlJobConfig.class);
 
     @Value("${xxl.job.admin.addresses}")
     private String adminAddresses;

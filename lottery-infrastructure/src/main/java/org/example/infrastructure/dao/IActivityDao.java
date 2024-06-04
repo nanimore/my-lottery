@@ -51,4 +51,12 @@ public interface IActivityDao extends BaseMapper<Activity> {
     */
    List<Activity> queryActivityInfoList(ActivityInfoLimitPageReq req);
 
+
+   /**
+    * 更新用户领取活动后，活动库存
+    *
+    * @param activity  入参
+    */
+   void updateActivityStock(Activity activity);
+
 }

@@ -7,51 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55d39566-4ed6-4685-be18-5a250af7cd52" name="Changes" comment="滑动库存分布式锁处理活动秒杀">
-      <change afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/deploy/IActivityDeployProcess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/deploy/impl/ActivityDeployProcessImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-common/src/main/java/org/example/common/PageRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/model/aggregates/ActivityInfoLimitPageRich.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/model/req/ActivityInfoLimitPageReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/java/org/example/interfaces/assembler/ActivityMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/java/org/example/interfaces/facade/LotteryActivityDeploy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/deploy/ILotteryActivityDeploy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/deploy/dto/ActivityDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/deploy/req/ActivityPageReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/deploy/res/ActivityRes.java" afterDir="false" />
+    <list default="true" id="55d39566-4ed6-4685-be18-5a250af7cd52" name="Changes" comment="活动列表数据展示">
+      <change afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/mq/consumer/LotteryActivityPartakeRecordListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/IActivityProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/draw/IActivityProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/impl/ActivityProcessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/draw/impl/ActivityProcessImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/req/DrawProcessReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/draw/req/DrawProcessReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/res/DrawProcessResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/draw/res/DrawProcessResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/res/RuleQuantificationCrowdResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/org/example/application/process/draw/res/RuleQuantificationCrowdResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/model/vo/ActivityVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/model/vo/ActivityVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/repository/IActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/repository/IActivityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/deploy/IActivityDeploy.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/deploy/IActivityDeploy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/deploy/impl/ActivityDeployImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/deploy/impl/ActivityDeployImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/repository/IUserTakeActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/repository/IUserTakeActivityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/partake/IActivityPartake.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/partake/IActivityPartake.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/partake/impl/ActivityPartakeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/org/example/domain/activity/service/partake/impl/ActivityPartakeImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IActivityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IActivityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IUserStrategyExportDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/dao/IUserStrategyExportDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/repository/ActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/repository/ActivityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/java/org/example/interfaces/ActivityBooth.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/java/org/example/interfaces/ActivityBooth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/java/org/example/interfaces/assembler/AwardMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/java/org/example/interfaces/assembler/AwardMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/java/org/example/interfaces/assembler/IMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/java/org/example/interfaces/assembler/IMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/java/org/example/interfaces/facade/LotteryActivityBooth.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/java/org/example/interfaces/facade/LotteryActivityBooth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/repository/UserTakeActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/org/example/infrastructure/repository/UserTakeActivityRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/Activity_Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/Activity_Mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/DaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/DaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/application/ActivityProcessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/application/ActivityProcessTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/interfaces/LotteryActivityBoothTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/test/java/org/example/test/interfaces/LotteryActivityBoothTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/IActivityBooth.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/booth/IActivityBooth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/ILotteryActivityBooth.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/booth/ILotteryActivityBooth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/dto/ActivityDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/booth/dto/ActivityDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/dto/AwardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/booth/dto/AwardDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/req/ActivityReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/booth/req/ActivityReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/req/DrawReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/booth/req/DrawReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/req/QuantificationDrawReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/booth/req/QuantificationDrawReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/res/ActivityRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/booth/res/ActivityRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/res/DrawRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/org/example/rpc/activity/booth/res/DrawRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/UserStrategyExport_Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/UserStrategyExport_Mapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +38,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.6.0/spring-data-redis-2.6.0.jar!/org/springframework/data/redis/core/RedisTemplate.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -145,11 +115,11 @@
       <recent name="org.example.domain.strategy.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.application.mq.consumer" />
       <recent name="org.example.domain.activity.model.vo" />
       <recent name="org.example.interfaces.assembler" />
       <recent name="org.example.interfaces.facade" />
       <recent name="org.example.common" />
-      <recent name="org.example.domain.activity.model.req" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.LotteryApplication">
@@ -242,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ActivityProcessTest.test_doDrawProcess2" />
         <item itemvalue="JUnit.UserStrategyExportDaoTest.test_userStrategyExportDao" />
-        <item itemvalue="JUnit.ActivityProcessTest.test_doDrawProcess" />
-        <item itemvalue="JUnit.KafkaProducerTest.test_send2" />
         <item itemvalue="JUnit.KafkaProducerTest.test_send" />
+        <item itemvalue="JUnit.KafkaProducerTest.test_send2" />
+        <item itemvalue="JUnit.ActivityProcessTest.test_doDrawProcess" />
+        <item itemvalue="JUnit.ActivityProcessTest.test_doDrawProcess2" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +233,10 @@
       <workItem from="1713317489020" duration="3355000" />
       <workItem from="1713323757538" duration="33027000" />
       <workItem from="1713753550154" duration="13687000" />
-      <workItem from="1713788266697" duration="4577000" />
+      <workItem from="1713788266697" duration="38752000" />
+      <workItem from="1716200722516" duration="682000" />
+      <workItem from="1716204861754" duration="10550000" />
+      <workItem from="1716339560926" duration="22235000" />
     </task>
     <task id="LOCAL-00001" summary="跑通RPC">
       <option name="closed" value="true" />
@@ -361,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713506589735</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="活动列表数据展示">
+      <option name="closed" value="true" />
+      <created>1713838067884</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713838067884</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +372,8 @@
     <MESSAGE value="测试MQ消息组件Kafka服务环境" />
     <MESSAGE value="MQ解耦抽奖发货流程" />
     <MESSAGE value="滑动库存分布式锁处理活动秒杀" />
-    <option name="LAST_COMMIT_MESSAGE" value="滑动库存分布式锁处理活动秒杀" />
+    <MESSAGE value="活动列表数据展示" />
+    <option name="LAST_COMMIT_MESSAGE" value="活动列表数据展示" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

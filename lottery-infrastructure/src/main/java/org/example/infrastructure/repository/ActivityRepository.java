@@ -41,7 +41,7 @@ public class ActivityRepository implements IActivityRepository {
     @Resource
     private RedisUtil redisUtil;
 
-    private Logger logger = LoggerFactory.getLogger(ActivityRepository.class);
+    private static final Logger logger = LoggerFactory.getLogger(ActivityRepository.class);
 
 
     @Override
@@ -111,9 +111,12 @@ public class ActivityRepository implements IActivityRepository {
         activityBillVO.setEndDateTime(activity.getEndDateTime());
         activityBillVO.setTakeCount(activity.getTakeCount());
         activityBillVO.setStockCount(activity.getStockCount());
+        // TODO ????
+        // activityBillVO.setStockSurplusCount(null == usedStockCountObj ? activity.getStockSurplusCount() : activity.getStockCount() - Integer.parseInt(String.valueOf(usedStockCountObj)));
         activityBillVO.setStockSurplusCount(activity.getStockSurplusCount());
         activityBillVO.setStrategyId(activity.getStrategyId());
         activityBillVO.setState(activity.getState());
+
         activityBillVO.setUserTakeLeftCount(null == userTakeActivityCount ? null : userTakeActivityCount.getLeftCount());
 
         return activityBillVO;
@@ -145,7 +148,7 @@ public class ActivityRepository implements IActivityRepository {
     @Override
     public StockResult subtractionActivityStockByRedis(String uId, Long activityId, Integer stockCount) {
 
-        //  1. 获取抽奖活动库存 Key
+        //  1. 获取抽奖活动已使用库存 Key
         String stockKey = Constants.RedisKey.KEY_LOTTERY_ACTIVITY_STOCK_COUNT(activityId);
 
         // 2. 扣减库存，目前占用库存数

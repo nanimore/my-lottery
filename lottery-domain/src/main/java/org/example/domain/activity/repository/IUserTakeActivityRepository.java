@@ -1,9 +1,12 @@
 package org.example.domain.activity.repository;
 
+import org.example.domain.activity.model.vo.ActivityPartakeRecordVO;
 import org.example.domain.activity.model.vo.DrawOrderVO;
+import org.example.domain.activity.model.vo.InvoiceVO;
 import org.example.domain.activity.model.vo.UserTakeActivityVO;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @description: 用户参与活动仓储接口
@@ -70,6 +73,21 @@ public interface IUserTakeActivityRepository {
      * @param mqState MQ 发送状态
      */
     void updateInvoiceMqState(String uId, Long orderId, Integer mqState);
+
+    /**
+     * 扫描发货单 MQ 状态，把未发送 MQ 的单子扫描出来，做补偿
+     *
+     * @return 发货单
+     */
+    List<InvoiceVO> scanInvoiceMqState();
+
+    /**
+     * 更新活动库存
+     *
+     * @param activityPartakeRecordVO   活动领取记录
+     */
+    void updateActivityStock(ActivityPartakeRecordVO activityPartakeRecordVO);
+
 
 
 }

@@ -18,7 +18,7 @@ import java.util.Map;
 */
 public abstract class EngineBase extends EngineConfig implements EngineFilter {
 
-    private Logger logger = LoggerFactory.getLogger(EngineBase.class);
+    private static final Logger logger = LoggerFactory.getLogger(EngineBase.class);
 
     @Override
     public EngineResult process(DecisionMatterReq matter) {

@@ -25,7 +25,7 @@ import java.util.Map;
 @SpringBootTest
 public class UserStrategyExportDaoTest {
 
-    private Logger logger = LoggerFactory.getLogger(UserStrategyExportDaoTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserStrategyExportDaoTest.class);
 
     @Resource
     private IUserStrategyExportDao userStrategyExportDao;

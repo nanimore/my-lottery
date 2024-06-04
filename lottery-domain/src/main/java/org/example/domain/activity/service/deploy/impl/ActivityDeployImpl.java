@@ -28,7 +28,7 @@ import java.util.List;
 @Service
 public class ActivityDeployImpl implements IActivityDeploy {
 
-    private Logger logger = LoggerFactory.getLogger(ActivityDeployImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(ActivityDeployImpl.class);
 
     @Resource
     private IActivityRepository activityRepository;

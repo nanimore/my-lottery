@@ -20,7 +20,7 @@ import java.util.Map;
 @SpringBootTest
 public class SupportTest {
 
-    private Logger logger = LoggerFactory.getLogger(SupportTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(SupportTest.class);
 
     @Resource
     private Map<Constants.Ids, IIdGenerator> idGeneratorMap;

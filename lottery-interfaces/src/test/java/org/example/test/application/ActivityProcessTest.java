@@ -21,7 +21,7 @@ import javax.annotation.Resource;
 @SpringBootTest
 public class ActivityProcessTest {
 
-    private Logger logger = LoggerFactory.getLogger(ActivityProcessTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(ActivityProcessTest.class);
 
     @Resource
     private IActivityProcess activityProcess;

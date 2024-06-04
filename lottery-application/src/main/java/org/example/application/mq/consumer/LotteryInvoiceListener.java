@@ -27,7 +27,7 @@ import java.util.Optional;
 @Component
 public class LotteryInvoiceListener {
 
-    private Logger logger = LoggerFactory.getLogger(LotteryInvoiceListener.class);
+    private static final Logger logger = LoggerFactory.getLogger(LotteryInvoiceListener.class);
 
     @Resource
     private DistributionGoodsFactory distributionGoodsFactory;

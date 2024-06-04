@@ -21,7 +21,7 @@ import javax.annotation.Resource;
 @SpringBootTest
 public class KafkaProducerTest {
 
-    private Logger logger = LoggerFactory.getLogger(KafkaProducerTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(KafkaProducerTest.class);
 
     @Resource
     private KafkaProducer kafkaProducer;

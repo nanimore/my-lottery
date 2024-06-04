@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SpringBootTest
 public class LotteryActivityBoothTest {
 
-    private Logger logger = LoggerFactory.getLogger(LotteryActivityBoothTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(LotteryActivityBoothTest.class);
 
     @Resource
     private ILotteryActivityBooth lotteryActivityBooth;

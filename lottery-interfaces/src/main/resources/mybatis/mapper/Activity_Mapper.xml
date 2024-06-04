@@ -83,4 +83,10 @@
     </select>
 
 
+    <update id="updateActivityStock" parameterType="org.example.infrastructure.po.Activity">
+        UPDATE activity SET stock_surplus_count = #{stockSurplusCount}
+        WHERE activity_id = #{activityId} AND stock_surplus_count > #{stockSurplusCount}
+    </update>
+
+
 </mapper>

@@ -18,7 +18,7 @@ import java.util.Optional;
 @Component
 public class KafkaConsumer {
 
-    private Logger logger = LoggerFactory.getLogger(KafkaConsumer.class);
+    private static final Logger logger = LoggerFactory.getLogger(KafkaConsumer.class);
 
     @KafkaListener(topics = KafkaProducerDemo.TOPIC_TEST, groupId = KafkaProducerDemo.TOPIC_GROUP)
     public void topicTest(ConsumerRecord<?, ?> record, Acknowledgment ack, @Header(KafkaHeaders.RECEIVED_TOPIC) String topic) {

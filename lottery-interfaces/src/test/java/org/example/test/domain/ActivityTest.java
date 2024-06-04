@@ -35,7 +35,7 @@ import java.util.List;
 @SpringBootTest
 public class ActivityTest {
 
-    private Logger logger = LoggerFactory.getLogger(ActivityTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(ActivityTest.class);
 
     @Resource
     private IActivityDeploy activityDeploy;

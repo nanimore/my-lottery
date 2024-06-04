@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 @Component
 public class KafkaProducerDemo {
 
-    private Logger logger = LoggerFactory.getLogger(KafkaProducerDemo.class);
+    private static final Logger logger = LoggerFactory.getLogger(KafkaProducerDemo.class);
 
     @Resource
     private KafkaTemplate<String, Object> kafkaTemplate;

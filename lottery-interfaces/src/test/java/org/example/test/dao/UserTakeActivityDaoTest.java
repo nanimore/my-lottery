@@ -20,7 +20,7 @@ import java.util.Date;
 @SpringBootTest
 public class UserTakeActivityDaoTest {
 
-    private Logger logger = LoggerFactory.getLogger(ActivityDaoTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(ActivityDaoTest.class);
 
     @Resource
     private IUserTakeActivityDao userTakeActivityDao;

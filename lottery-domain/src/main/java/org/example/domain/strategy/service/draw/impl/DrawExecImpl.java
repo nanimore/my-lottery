@@ -18,7 +18,7 @@ import java.util.List;
 @Service("drawExec")
 public class DrawExecImpl extends AbstractDrawBase {
 
-    private Logger logger = LoggerFactory.getLogger(DrawExecImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(DrawExecImpl.class);
 
     @Resource
     private IStrategyRepository strategyRepository;

@@ -25,7 +25,7 @@ import java.util.List;
 @Service
 public class LotteryActivityDeploy implements ILotteryActivityDeploy {
 
-    private Logger logger = LoggerFactory.getLogger(LotteryActivityBooth.class);
+    private static final Logger logger = LoggerFactory.getLogger(LotteryActivityBooth.class);
 
     @Resource
     private IActivityDeployProcess activityDeploy;

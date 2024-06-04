@@ -2,19 +2,25 @@ package org.example.infrastructure.repository;
 
 
 import org.example.common.Constants;
+import org.example.domain.activity.model.vo.ActivityPartakeRecordVO;
 import org.example.domain.activity.model.vo.DrawOrderVO;
+import org.example.domain.activity.model.vo.InvoiceVO;
 import org.example.domain.activity.model.vo.UserTakeActivityVO;
 import org.example.domain.activity.repository.IUserTakeActivityRepository;
+import org.example.infrastructure.dao.IActivityDao;
 import org.example.infrastructure.dao.IUserStrategyExportDao;
 import org.example.infrastructure.dao.IUserTakeActivityCountDao;
 import org.example.infrastructure.dao.IUserTakeActivityDao;
+import org.example.infrastructure.po.Activity;
 import org.example.infrastructure.po.UserStrategyExport;
 import org.example.infrastructure.po.UserTakeActivity;
 import org.example.infrastructure.po.UserTakeActivityCount;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @description: 用户参与活动仓储
@@ -30,6 +36,9 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
 
     @Resource
     private IUserStrategyExportDao userStrategyExportDao;
+
+    @Resource
+    private IActivityDao activityDao;
 
 
     @Override
@@ -63,6 +72,7 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
         if (null == userTakeLeftCount) {
             userTakeActivity.setTakeCount(1);
         } else {
+            // 用户参与次数=可参与次数-剩余次数+1
             userTakeActivity.setTakeCount(takeCount - userTakeLeftCount + 1);
         }
         userTakeActivity.setStrategyId(strategyId);
@@ -133,6 +143,34 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
         userStrategyExport.setOrderId(orderId);
         userStrategyExport.setMqState(mqState);
         userStrategyExportDao.updateInvoiceMqState(userStrategyExport);
+    }
+
+
+    @Override
+    public List<InvoiceVO> scanInvoiceMqState() {
+        // 查询发送MQ失败和超时30分钟，未发送MQ的数据
+        List<UserStrategyExport> userStrategyExportList = userStrategyExportDao.scanInvoiceMqState();
+        // 转换对象
+        List<InvoiceVO> invoiceVOList = new ArrayList<>(userStrategyExportList.size());
+        for (UserStrategyExport userStrategyExport : userStrategyExportList) {
+            InvoiceVO invoiceVO = new InvoiceVO();
+            invoiceVO.setuId(userStrategyExport.getuId());
+            invoiceVO.setOrderId(userStrategyExport.getOrderId());
+            invoiceVO.setAwardId(userStrategyExport.getAwardId());
+            invoiceVO.setAwardType(userStrategyExport.getAwardType());
+            invoiceVO.setAwardName(userStrategyExport.getAwardName());
+            invoiceVO.setAwardContent(userStrategyExport.getAwardContent());
+            invoiceVOList.add(invoiceVO);
+        }
+        return invoiceVOList;
+    }
+
+    @Override
+    public void updateActivityStock(ActivityPartakeRecordVO activityPartakeRecordVO) {
+        Activity activity = new Activity();
+        activity.setActivityId(activityPartakeRecordVO.getActivityId());
+        activity.setStockSurplusCount(activityPartakeRecordVO.getStockSurplusCount());
+        activityDao.updateActivityStock(activity);
     }
 
 }

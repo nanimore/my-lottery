@@ -20,7 +20,7 @@ import javax.annotation.Resource;
 @SpringBootTest
 public class ActivityDaoTest {
 
-    private Logger logger = LoggerFactory.getLogger(ActivityDaoTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(ActivityDaoTest.class);
 
     @Resource
     private IActivityDao activityDao;

@@ -31,7 +31,7 @@ import javax.annotation.Resource;
 @Service
 public class LotteryActivityBooth implements ILotteryActivityBooth {
 
-    private Logger logger = LoggerFactory.getLogger(LotteryActivityBooth.class);
+    private static final Logger logger = LoggerFactory.getLogger(LotteryActivityBooth.class);
 
     @Resource
     private IActivityProcess activityProcess;

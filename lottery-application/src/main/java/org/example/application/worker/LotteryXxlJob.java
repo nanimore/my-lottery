@@ -22,7 +22,7 @@ import java.util.List;
 @Component
 public class LotteryXxlJob {
 
-    private Logger logger = LoggerFactory.getLogger(LotteryXxlJob.class);
+    private static final Logger logger = LoggerFactory.getLogger(LotteryXxlJob.class);
 
     @Resource
     private IActivityDeploy activityDeploy;
